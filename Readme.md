@@ -35,7 +35,7 @@ Use Postman or another API testing tool to test the API endpoints.
 
 ### Register a New User
 
-- **Endpoint**: `/register`
+- **Endpoint**: `{backend-url}/api/auth/register`
 - **Method**: `POST`
 - **Body** (raw, JSON):
 
@@ -49,7 +49,7 @@ Use Postman or another API testing tool to test the API endpoints.
 
 ### Login
 
-- **Endpoint**: `/login`
+- **Endpoint**: `{backend-url}/api/auth/login`
 - **Method**: `POST`
 - **Body** (raw, JSON):
 
@@ -62,7 +62,7 @@ Use Postman or another API testing tool to test the API endpoints.
 
 ### Forgot Password
 
-- **Endpoint**: `/forgot-password`
+- **Endpoint**: `{backend-url}/api/auth/forgot-password`
 - **Method**: `POST`
 - **Body** (raw, JSON):
 
