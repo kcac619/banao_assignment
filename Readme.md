@@ -1,6 +1,6 @@
 # Banao Assignment
 
-This project is a basic authentication system developed using Node.js, Express, and MongoDB. It facilitates user registration, login, and password reset functionalities.
+This project is a basic authentication system developed using Node.js, Express, and MongoDB. It facilitates user registration, login, password reset functionalities, and CRUD operations for social media posts with likes and comments.
 
 ## Prerequisites
 
@@ -108,4 +108,70 @@ Use Postman or another API testing tool to test the API endpoints.
   }
   ```
 
-Replace `<username>`, `<email>`, and `<password>` with actual user details when testing the endpoints.
+### Create Post
+
+- **Endpoint**: `{backend-url}/api/posts`
+- **Method**: `POST`
+- **Headers**:
+  - Authorization: Bearer `<token>`
+- **Body** (raw, JSON):
+
+  ```json
+  {
+    "content": "<content>"
+  }
+  ```
+
+### Get All Posts
+
+- **Endpoint**: `{backend-url}/api/posts`
+- **Method**: `GET`
+
+### Get Post by ID
+
+- **Endpoint**: `{backend-url}/api/posts/:id`
+- **Method**: `GET`
+
+### Update Post
+
+- **Endpoint**: `{backend-url}/api/posts/:id`
+- **Method**: `PUT`
+- **Headers**:
+  - Authorization: Bearer `<token>`
+- **Body** (raw, JSON):
+
+  ```json
+  {
+    "content": "<updated content>"
+  }
+  ```
+
+### Delete Post
+
+- **Endpoint**: `{backend-url}/api/posts/:id`
+- **Method**: `DELETE`
+- **Headers**:
+  - Authorization: Bearer `<token>`
+
+### Like Post
+
+- **Endpoint**: `{backend-url}/api/posts/:id/like`
+- **Method**: `POST`
+- **Headers**:
+  - Authorization: Bearer `<token>`
+
+### Add Comment to Post
+
+- **Endpoint**: `{backend-url}/api/posts/:id/comments`
+- **Method**: `POST`
+- **Headers**:
+  - Authorization: Bearer `<token>`
+- **Body** (raw, JSON):
+
+  ```json
+  {
+    "text": "<comment text>"
+  }
+  ```
+
+Replace `<username>`, `<email>`, `<password>`, `<content>`, `<updated content>`, and `<comment text>` with actual values when testing the endpoints.
